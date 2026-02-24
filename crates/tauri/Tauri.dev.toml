@@ -1,0 +1,9 @@
+productName = "NetLab"
+identifier = "cc.vust.netlab_dev"
+[[app.windows]]
+title = "NetLab"
+width = 1024
+height = 768
+decorations = false
+visible = false
+transparent = true

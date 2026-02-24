@@ -1,0 +1,46 @@
+[package]
+name = "netlab"
+version = "0.1.0-alpha.1"
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "netlab_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+
+[dependencies]
+engine = { path = "../engine" }
+
+tauri = { version = "2.10.2", features = ["protocol-asset", "tray-icon"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+log="0.4.27"
+hex = "0.4.3"
+
+tauri-plugin-log = "2.7.1"
+tauri-plugin-clipboard-manager = "2.3.2"
+tauri-plugin-fs = "2.4.4"
+tauri-plugin-opener = "2.5.2"
+tauri-plugin-process = "2.3.1"
+tauri-plugin-dialog = "2.4.2"
+tauri-plugin-http = { version = "2.5.4", features = ["json", "dangerous-settings", "blocking", "multipart"] }
+tauri-plugin-notification = "2.3.3"
+tokio = { workspace = true }
+futures = "0.3.31"
+rusqlite = { version = "0.32.1", features = ["bundled"] }
+
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-autostart = "2.5.1"
+tauri-plugin-single-instance = "2.3.6"
+tauri-plugin-updater = "2.9.0"
+tauri-plugin-window-state = "2.4.1"
+
+
+[build-dependencies]
+tauri-build = { version = "2.5.3" }

@@ -1,0 +1,22 @@
+[package]
+name = "cli"
+version = "0.1.0-alpha.1"
+edition.workspace = true
+build = "build.rs"
+
+[[bin]]
+name = "netlab-cli"
+path = "src/main.rs"
+
+[dependencies]
+engine = { path = "../engine" }
+
+clap = { version = "4.5.23", features = ["derive"] }
+crossterm = "0.27.0"
+ratatui = { version = "0.26.3", default-features = false, features = ["crossterm"] }
+tokio = { workspace = true }
+shadow-rs = { version = "1.2.1", features = ["metadata"] }
+
+[build-dependencies]
+shadow-rs = "1.2.1"
+winres = "0.1.12"
