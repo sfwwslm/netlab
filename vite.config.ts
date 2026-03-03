@@ -11,7 +11,7 @@ const host = process.env.TAURI_DEV_HOST;
 
 const changelogContent = fs.readFileSync(
   path.resolve(__dirname, "CHANGELOG.md"),
-  "utf-8"
+  "utf-8",
 );
 
 // --- Git 信息获取 ---
@@ -72,7 +72,7 @@ export default defineConfig(async () => ({
       : undefined,
     watch: {
       // 3. tell vite to ignore watching `src-tauri`
-      ignored: ["**/src-tauri/**"],
+      ignored: ["**/src-tauri/**", "**/crates/**"],
     },
   },
 }));
