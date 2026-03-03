@@ -11,6 +11,6 @@ fn main() {
         res.set_resource_file("app.rc");
         res.compile().expect("compile Windows resources");
         println!("cargo:rerun-if-changed=app.rc");
-        println!("cargo:rerun-if-changed=../tauri/icons/icon.ico");
+        println!("cargo:rerun-if-changed=../../src-tauri/icons/icon.ico");
     }
 }

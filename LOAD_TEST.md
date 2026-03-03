@@ -60,7 +60,7 @@ engine (core load test runner)
 
 对应代码入口：
 
-- Tauri invoke：`crates/tauri/src/invokes/load_test.rs`
+- Tauri invoke：`src-tauri/src/invokes/load_test.rs`
 - Engine runner：`crates/engine/src/scenario/load_test.rs`
 
 ### 3.2 实时指标上报
@@ -83,7 +83,7 @@ engine (core load test runner)
 - 表：`load_test_history`
 - 记录内容：基本配置（url/method/concurrency/duration/timeout/headers）+ 汇总指标（success_rate/avg_latency/rps/p95/p99）
 
-相关代码：`crates/tauri/src/invokes/load_test.rs` 中的 `save_history/query_history/...`
+相关代码：`src-tauri/src/invokes/load_test.rs` 中的 `save_history/query_history/...`
 
 ---
 

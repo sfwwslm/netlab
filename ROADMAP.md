@@ -93,6 +93,6 @@
   - 配置: `ExportFormat::{CSV, Prometheus}`
   - 依赖: 指标结构扩展
 - P2 历史对比/回归报告
-  - 模块: `crates/tauri` + `crates/engine/src/metrics/`（统计逻辑在 engine）
+  - 模块: `src-tauri` + `crates/engine/src/metrics/`（统计逻辑在 engine）
   - 配置: `BaselineCompareConfig { window, thresholds }`
   - 依赖: 可复现计划、指标分布

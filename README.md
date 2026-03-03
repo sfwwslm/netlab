@@ -1,4 +1,4 @@
-# ![logo](/crates/tauri/icons/32x32.png) netlab 网络实验室
+# ![logo](/src-tauri/icons/32x32.png) netlab 网络实验室
 
 **netlab** 是一个面向工程师的 **网络行为实验、调试与验证平台**。
 
@@ -50,9 +50,9 @@
 netlab/
 ├── crates/
 │   ├── engine/        # ⭐ 核心网络引擎
-│   ├── cli/           # 命令行入口（TUI CLI）
-│   └── tauri/         # GUI 壳（可插拔）
-├── src/          # 前端工程
+│   └── cli/           # 命令行入口（TUI CLI）
+├── src/               # 前端工程
+├── src-tauri/         # GUI 壳（可插拔）
 ├── ARCHITECTURE_V1.md # 架构宪法
 ├── CONTRIBUTING.md    # 贡献与约束规则
 └── README.md
@@ -88,7 +88,7 @@ netlab/
 * 内置日志中心窗口（跨功能日志订阅）
 * 界面语言支持中文/英文/日文
 
-👉 详见：[Gui 说明](crates/tauri/README.md)
+👉 详见：[Gui 说明](src-tauri/README.md)
 
 ---
 

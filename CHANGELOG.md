@@ -2,7 +2,7 @@
 
 - [engine](crates/engine/CHANGELOG.md)
 - [cli](crates/cli/CHANGELOG.md)
-- [tauri](crates/tauri/CHANGELOG.md)
+- [tauri](src-tauri/CHANGELOG.md)
 
 ## 2026年2月24日
 

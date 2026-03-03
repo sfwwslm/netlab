@@ -1,2 +1,2 @@
 // Windows resource script for netlab-cli
-1 ICON "../tauri/icons/icon.ico"
+1 ICON "../../src-tauri/icons/icon.ico"
